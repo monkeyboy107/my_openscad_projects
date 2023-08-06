@@ -1,12 +1,12 @@
 use <../case_template/lid.scad>
 //Lid
-height = 1;
+height = 4;
 length = 1;
 x = 239.26;
 y = 70.34;
 
 //Lid lip
-lip_height = 4;
+lip_height = 8;
 lip_length = 1;
 lip_percent = .9; 
 
