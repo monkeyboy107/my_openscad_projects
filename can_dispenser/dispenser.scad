@@ -22,7 +22,9 @@ eject_ramp_bottom_left = [0, eject_ramp_y, 0];
 eject_ramp_bottom_right = [eject_ramp_x, eject_ramp_y, 0];
 eject_ramp_top_left = [0, 0, eject_ramp_z];
 eject_ramp_top_right = [eject_ramp_x, 0, eject_ramp_z];
-eject_ramp = [eject_ramp_bottom_left, eject_ramp_bottom_right, eject_ramp_top_left, eject_ramp_top_right];
+eject_ramp_back_left = [0, 0, 0];
+eject_ramp_back_right = [eject_ramp_x, 0, 0];
+eject_ramp = [eject_ramp_bottom_left, eject_ramp_bottom_right, eject_ramp_top_left, eject_ramp_top_right, eject_ramp_back_left, eject_ramp_back_right];
 
 //eject_flat
 eject_flat_x = dispenser_width;
