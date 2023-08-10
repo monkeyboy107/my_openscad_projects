@@ -2,7 +2,7 @@ use <can.scad>
 //General settings
 can_height = 123.53;
 dispenser_width = can_height + 2;
-dispenser_length = 67;
+dispenser_length = 70;
 wall_thickness = 4;
 lip_wall_thickness = 2;
 tall_wall_x = 125;
@@ -21,6 +21,7 @@ can_top_rise = 14.57;
 can_bottom_radius = 50/2;
 can_bottom_rise = 7.4;
 
+//module hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z_offset, lip_z){
 module hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z){
     //left_tall_wall
     left_tall_wall_x = 0;
@@ -285,7 +286,7 @@ module hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip
     }
 }
 
-module hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, opening_z){
+module hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, lip_z_offset, opening_z){
     difference(){
         hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z);
         hull(){
@@ -300,7 +301,7 @@ module hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_t
 
 hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z);
 /*translate([dispenser_width + 30, 0, 0]){
-    hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, opening_z);
+    hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, lip_z_offset, opening_z);
 }
 
 translate([160, 30, 30]){

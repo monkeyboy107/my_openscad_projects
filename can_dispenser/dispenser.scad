@@ -5,19 +5,20 @@ dispenser_length = 67;
 wall_thickness = 4;
 lip_wall_thickness = 2;
 tall_wall_x = 125;
-tall_wall_y = dispenser_length;
+tall_wall_y = 109.26;
 eject_wall_x = dispenser_width;
 eject_wall_y = 180;
-eject_wall_z = 53.67;
-lip_x = tall_wall_x;
+eject_wall_z = 53.67/2;
+lip_x = tall_wall_x + .53;
 lip_y = dispenser_length;
 lip_z = 5;
 lip_z_offset = eject_wall_z;
+back_wall_z = 50/2;
 
 //eject_ramp
 eject_ramp_x = tall_wall_x;
 eject_ramp_y = tall_wall_y;
-eject_ramp_z = 50;
+eject_ramp_z = back_wall_z;
 eject_ramp_bottom_left = [0, eject_ramp_y, 0];
 eject_ramp_bottom_right = [eject_ramp_x, eject_ramp_y, 0];
 eject_ramp_top_left = [0, 0, eject_ramp_z];
@@ -83,6 +84,20 @@ front_eject_top_left_thickness = [0, front_eject_wall_y + wall_thickness, front_
 front_eject_top_right_thickness = [front_eject_wall_x, front_eject_wall_y + wall_thickness, front_eject_wall_z];
 front_eject = [front_eject_bottom_left, front_eject_bottom_right, front_eject_top_left, front_eject_top_right, front_eject_bottom_left_thickness, front_eject_bottom_right_thickness, front_eject_top_left_thickness, front_eject_top_right_thickness];
 
+//back_eject_wall
+back_eject_wall_x = eject_wall_x;
+back_eject_wall_y = 0;
+back_eject_wall_z = eject_wall_z;
+back_eject_bottom_left = [0, back_eject_wall_y, 0];
+back_eject_bottom_right = [back_eject_wall_x, back_eject_wall_y, 0];
+back_eject_top_left = [0, back_eject_wall_y, back_eject_wall_z];
+back_eject_top_right = [back_eject_wall_x, back_eject_wall_y, back_eject_wall_z];
+back_eject_bottom_left_thickness = [0, back_eject_wall_y  + wall_thickness, 0];
+back_eject_bottom_right_thickness = [back_eject_wall_x, back_eject_wall_y + wall_thickness, 0];
+back_eject_top_left_thickness = [0, back_eject_wall_y + wall_thickness, back_eject_wall_z];
+back_eject_top_right_thickness = [back_eject_wall_x, back_eject_wall_y + wall_thickness, back_eject_wall_z];
+back_eject = [back_eject_bottom_left, back_eject_bottom_right, back_eject_top_left, back_eject_top_right, back_eject_bottom_left_thickness, back_eject_bottom_right_thickness, back_eject_top_left_thickness, back_eject_top_right_thickness];
+
 //eject_finger_assist
 eject_finger_assist_radius = 11;
 eject_finger_assist_length = dispenser_width + 10;
@@ -94,13 +109,13 @@ eject_finger_assist_z = eject_wall_z;
 left_lip_wall_lip_x = 0;
 left_lip_wall_lip_y = lip_y;
 left_lip_wall_lip_z = lip_z;
-left_wall_lip_bottom_back = [left_lip_wall_lip_x, 0, 0];
+left_wall_lip_bottom_back = [left_lip_wall_lip_x, lip_wall_thickness, 0];
 left_wall_lip_bottom_forward = [left_lip_wall_lip_x, left_lip_wall_lip_y, lip_z_offset];
-left_wall_lip_top_back = [left_lip_wall_lip_x, 0, lip_z_offset + left_lip_wall_lip_z];
+left_wall_lip_top_back = [left_lip_wall_lip_x, lip_wall_thickness, lip_z_offset + left_lip_wall_lip_z];
 left_wall_lip_top_forward = [left_lip_wall_lip_x, left_lip_wall_lip_y, lip_z_offset + left_lip_wall_lip_z];
-left_wall_lip_bottom_back_thickness = [left_lip_wall_lip_x, 0, lip_z_offset];
+left_wall_lip_bottom_back_thickness = [left_lip_wall_lip_x, lip_wall_thickness, lip_z_offset];
 left_wall_lip_bottom_forward_thickness = [left_lip_wall_lip_x, left_lip_wall_lip_y, lip_z_offset];
-left_wall_lip_top_back_thickness = [left_lip_wall_lip_x, 0, lip_z_offset + left_lip_wall_lip_z];
+left_wall_lip_top_back_thickness = [left_lip_wall_lip_x, lip_wall_thickness, lip_z_offset + left_lip_wall_lip_z];
 left_wall_lip_top_forward_thickness = [left_lip_wall_lip_x, left_lip_wall_lip_y, lip_z_offset + left_lip_wall_lip_z];
 left_lip_wall = [left_wall_lip_bottom_back, left_wall_lip_bottom_forward, left_wall_lip_top_back, left_wall_lip_top_forward, left_wall_lip_bottom_back_thickness, left_wall_lip_bottom_forward_thickness, left_wall_lip_top_back_thickness, left_wall_lip_top_forward_thickness];
 
@@ -108,20 +123,20 @@ left_lip_wall = [left_wall_lip_bottom_back, left_wall_lip_bottom_forward, left_w
 right_lip_wall_lip_x = lip_x;
 right_lip_wall_lip_y = lip_y;
 right_lip_wall_lip_z = lip_z;
-right_wall_lip_bottom_back = [right_lip_wall_lip_x, 0, lip_z_offset];
+right_wall_lip_bottom_back = [right_lip_wall_lip_x, lip_wall_thickness, lip_z_offset];
 right_wall_lip_bottom_forward = [right_lip_wall_lip_x, right_lip_wall_lip_y, lip_z_offset];
-right_wall_lip_top_back = [right_lip_wall_lip_x, 0, lip_z_offset + right_lip_wall_lip_z];
+right_wall_lip_top_back = [right_lip_wall_lip_x, lip_wall_thickness, lip_z_offset + right_lip_wall_lip_z];
 right_wall_lip_top_forward = [right_lip_wall_lip_x, right_lip_wall_lip_y, lip_z_offset + right_lip_wall_lip_z];
-right_wall_lip_bottom_back_thickness = [right_lip_wall_lip_x, 0, lip_z_offset];
+right_wall_lip_bottom_back_thickness = [right_lip_wall_lip_x, lip_wall_thickness, lip_z_offset];
 right_wall_lip_bottom_forward_thickness = [right_lip_wall_lip_x, right_lip_wall_lip_y, lip_z_offset];
-right_wall_lip_top_back_thickness = [right_lip_wall_lip_x, 0, lip_z_offset + right_lip_wall_lip_z];
+right_wall_lip_top_back_thickness = [right_lip_wall_lip_x, lip_wall_thickness, lip_z_offset + right_lip_wall_lip_z];
 right_wall_lip_top_forward_thickness = [right_lip_wall_lip_x, right_lip_wall_lip_y, lip_z_offset + right_lip_wall_lip_z];
 right_lip_wall = [right_wall_lip_bottom_back, right_wall_lip_bottom_forward, right_wall_lip_top_back, right_wall_lip_top_forward, right_wall_lip_bottom_back_thickness, right_wall_lip_bottom_forward_thickness, right_wall_lip_top_back_thickness, right_wall_lip_top_forward_thickness];
 
 
 //back_lip_wall
 back_lip_wall_x = lip_x;
-back_lip_wall_y = 0;
+back_lip_wall_y = lip_wall_thickness;
 back_lip_wall_z = lip_z + lip_z_offset;
 back_wall_lip_bottom_left = [0, back_lip_wall_y, 0];
 back_wall_lip_bottom_right = [back_lip_wall_x, back_lip_wall_y, 0];
@@ -206,6 +221,13 @@ hull(){
 }
 hull(){
     for(point = back_lip_wall){
+        translate(point){
+            cylinder(1);
+        }
+    }
+}
+hull(){
+    for(point = back_eject){
         translate(point){
             cylinder(1);
         }

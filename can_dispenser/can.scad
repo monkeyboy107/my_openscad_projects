@@ -1,10 +1,10 @@
 //Can dimensions
-radius = 66.2/2;
+radius = 66.14/2;
 top_radius = 53.67/2;
 top_rise = 14.57;
 bottom_radius = 50/2;
 bottom_rise = 7.4;
-height = 123.53;
+height = 122.54;
 
 module can(height, radius, top_rise, top_radius, bottom_rise, bottom_radius){
     //Getting measurements correct
