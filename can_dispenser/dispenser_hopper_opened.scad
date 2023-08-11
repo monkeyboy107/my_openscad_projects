@@ -1,7 +1,16 @@
 use <can.scad>
 use <dispenser_hopper.scad>
+//Can settings
+can_radius = 66.2/2;
+can_top_radius = 53.67/2;
+can_top_rise = 14.57;
+can_bottom_radius = 50/2;
+can_bottom_rise = 7.4;
+can_height = 123.53;
+
 //General settings
 dispenser_length = 70;
+dispenser_width = can_height + 5;
 wall_thickness = 4;
 lip_wall_thickness = 2;
 tall_wall_x = 125;
@@ -13,16 +22,6 @@ lip_z = 5;
 lip_z_offset = tall_wall_z;
 opening_z = 67;
 offset_z = 0;
-
-//Can settings
-can_radius = 66.2/2;
-can_top_radius = 53.67/2;
-can_top_rise = 14.57;
-can_bottom_radius = 50/2;
-can_bottom_rise = 7.4;
-can_height = 123.53;
-
-dispenser_width = can_height + 2;
 
 hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, offset_z, opening_z);
 /*

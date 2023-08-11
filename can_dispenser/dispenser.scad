@@ -1,15 +1,15 @@
 //General settings
 can_height = 123.53;
-dispenser_width = can_height + 2;
+dispenser_width = can_height + 5;
 dispenser_length = 67;
 wall_thickness = 4;
 lip_wall_thickness = 2;
-tall_wall_x = 125;
+tall_wall_x = dispenser_width;
 tall_wall_y = 109.26;
 eject_wall_x = dispenser_width;
 eject_wall_y = 180;
 eject_wall_z = 53.67/2;
-lip_x = tall_wall_x + .53;
+lip_x = tall_wall_x;
 lip_y = dispenser_length;
 lip_z = 5;
 lip_z_offset = eject_wall_z;

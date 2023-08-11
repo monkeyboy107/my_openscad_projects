@@ -23,7 +23,7 @@ can_height = 123.53;
 
 dispenser_width = can_height + 5;
 
-hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, lip_z_offset);
+hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z_offset, lip_z);
 /*
 translate([5, 35, 10]){
     rotate([0, 90, 0]){
