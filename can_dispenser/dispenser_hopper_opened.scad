@@ -21,7 +21,7 @@ lip_y = tall_wall_y;
 lip_z = 5;
 lip_z_offset = tall_wall_z;
 opening_z = 67;
-offset_z = 0;
+offset_z = tall_wall_z;
 
 hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, offset_z, opening_z);
 /*

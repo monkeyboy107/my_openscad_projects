@@ -288,7 +288,7 @@ module hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip
 
 module hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, lip_z_offset, opening_z){
     difference(){
-        hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z);
+        hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z_offset, lip_z);
         hull(){
             for (x = [wall_thickness -lip_wall_thickness, can_height -1], y = [wall_thickness, 1000], z = [0, opening_z]){
                 translate([x, y, z]){
@@ -301,7 +301,7 @@ module hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_t
 
 //hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z);
 hopper(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z_offset, lip_z);
-/*translate([dispenser_width + 30, 0, 0]){
+translate([dispenser_width + 30, 0, 0]){
     hopper_with_opening(can_height, dispenser_width, dispenser_length, wall_thickness, lip_wall_thickness, tall_wall_x, tall_wall_y, tall_wall_z, lip_x, lip_y, lip_z, lip_z_offset, opening_z);
 }
 
@@ -309,4 +309,4 @@ translate([160, 30, 30]){
     rotate([0, 90, 0]){
         can(can_height, can_radius, can_top_rise, can_top_radius, can_bottom_rise, can_bottom_radius);
     }
-}*/
+}
