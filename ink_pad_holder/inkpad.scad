@@ -13,10 +13,30 @@ cap_y_offset = 6;
 cap_z_offset = lip_depth + base_height;
 cap_length = 63;
 cap_height = 7;
-base_dimentions = [[0, 0, 0], [base_length, 0, 0], [0, base_length, 0], [base_length, base_length, 0]];
-lip_dimentions = [[0, 0, 0], [lip_length, 0, 0], [0, lip_length, 0], [lip_length, lip_length, 0]];
-negative_lip_dimentions = [[lip_thickness, lip_thickness, 0], [lip_length -lip_thickness, lip_thickness, 0], [lip_thickness, lip_length -lip_thickness, 0], [lip_length -lip_thickness, lip_length -lip_thickness, 0]];
-cap_dimentions = [[0, 0, 0], [cap_length, 0, 0], [0, cap_length, 0], [cap_length, cap_length, 0]];
+base_dimentions = [
+[0, 0, 0],
+[base_length, 0, 0],
+[0, base_length, 0],
+[base_length, base_length, 0]
+];
+lip_dimentions = [
+[0, 0, 0],
+[lip_length, 0, 0],
+[0, lip_length, 0],
+[lip_length, lip_length, 0]
+];
+negative_lip_dimentions = [
+[lip_thickness,lip_thickness, 0],
+[lip_length -lip_thickness, lip_thickness, 0],
+[lip_thickness, lip_length -lip_thickness, 0],
+[lip_length -lip_thickness, lip_length -lip_thickness, 0]
+];
+cap_dimentions = [
+[0, 0, 0],
+[cap_length, 0, 0],
+[0, cap_length, 0],
+[cap_length, cap_length, 0]
+];
 
 difference(){
 	hull(){
